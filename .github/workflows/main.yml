@@ -15,7 +15,11 @@ jobs:
           repository: sufuwang/sufu.site
           token: ${{ secrets.SUFUSITETOKEN }}
           path: ./sufu.site
-      - run: |
+
+      - name: 更新子库
+        with:
+          token: ${{ secrets.SUFUSITETOKEN }}
+        run: |
           cd sufu.site
           git submodule init
           git submodule update --remote
