@@ -27,8 +27,8 @@ jobs:
       - name: 更新子库
         run: |
           cd sufu.site
-          # git config user.name robot
-          # git config user.email 1137120948@qq.com
+          git config user.name sufuwang-robot
+          git config user.email 1137120948@qq.com
           git add .
           git commit -m "robot: 更新子库"
           git push
