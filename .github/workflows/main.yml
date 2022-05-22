@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 获取 sufu.site
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           ref: master
           repository: sufuwang/sufu.site
