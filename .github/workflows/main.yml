@@ -8,7 +8,6 @@ jobs:
   Main:
     runs-on: ubuntu-latest
     steps:
-
       - name: 获取 sufu.site
         uses: actions/checkout@v3
         with:
@@ -17,13 +16,15 @@ jobs:
           token: ${{ secrets.SUFUSITETOKEN }}
           path: ./sufu.site
       
+    steps:
       - name: 更新子库
+      - uses: actions/checkout@v3
         run: |
           cd sufu.site
           git submodule init
           git submodule update --remote
-          # git config user.name github-actions
-          # git config user.email github-actions@github.com
+          # git config user.name robot
+          # git config user.email 1137120948@qq.com
           git add .
           git commit -m "robot: 更新子库"
           git push
