@@ -15,10 +15,9 @@ jobs:
           repository: sufuwang/sufu.site
           token: ${{ secrets.SUFUSITETOKEN }}
           path: ./sufu.site
-      
-    steps:
+
       - name: 更新子库
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         run: |
           cd sufu.site
           git submodule init
